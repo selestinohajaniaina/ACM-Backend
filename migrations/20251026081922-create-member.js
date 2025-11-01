@@ -9,6 +9,11 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
+      registrationNumber: {
+        type: Sequelize.STRING,
+        allowNull: false,
+        unique: true
+      },
       firstName: {
         type: Sequelize.STRING
       },
@@ -25,7 +30,7 @@ module.exports = {
         type: Sequelize.STRING
       },
       occupation: {
-        type: Sequelize.STRING
+        type: Sequelize.ENUM('student', 'unemployed', 'employee', 'entrepreneur')
       },
       phoneNumber: {
         type: Sequelize.STRING
@@ -35,6 +40,9 @@ module.exports = {
       },
       joinDate: {
         type: Sequelize.DATE
+      },
+      profileImage: {
+        type: Sequelize.STRING
       },
       createdAt: {
         allowNull: false,

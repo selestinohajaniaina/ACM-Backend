@@ -14,6 +14,7 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   Member.init({
+    registrationNumber: DataTypes.STRING,
     firstName: DataTypes.STRING,
     lastName: DataTypes.STRING,
     birthDate: DataTypes.DATE,
@@ -22,7 +23,8 @@ module.exports = (sequelize, DataTypes) => {
     occupation: DataTypes.STRING,
     phoneNumber: DataTypes.STRING,
     studyOrWorkPlace: DataTypes.STRING,
-    joinDate: DataTypes.DATE
+    joinDate: DataTypes.DATE,
+    profileImage: DataTypes.STRING
   }, {
     sequelize,
     modelName: 'Member',
