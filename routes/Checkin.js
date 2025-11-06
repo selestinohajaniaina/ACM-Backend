@@ -10,9 +10,10 @@ router.post('/', async (req, res) => {
     const member = await Member.findOne({ where: { registrationNumber }});
 
     if (!member) return res.json({ success: false, message: 'Member is not registred', data: null });
+    const memberId = member.id;
 
     const checkin = await Checkin.create({
-      registrationNumber,
+      memberId,
       activityId,
       checkInTime,
       checkOutTime,

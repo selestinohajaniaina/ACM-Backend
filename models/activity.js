@@ -11,6 +11,7 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+      Activity.hasMany(models.Checkin, { foreignKey: 'activityId' });
     }
   }
   Activity.init({
