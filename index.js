@@ -9,6 +9,7 @@ const { sequelize } = require('./models');
 const memberRoute = require('./routes/Member');
 const activityRoute = require('./routes/Activity');
 const checkinRoute = require('./routes/Checkin');
+const dashboardRoute = require('./routes/dashboard');
 const authRoute = require('./routes/Auth');
 
 const port = process.env.PORT;
@@ -25,6 +26,7 @@ app.use(bodyParser.urlencoded({ extended: true, limit: '10mb' }));
 app.use('/api/member', memberRoute);
 app.use('/api/activity', activityRoute);
 app.use('/api/checkin', checkinRoute);
+app.use('/api/dashboard', dashboardRoute);
 app.use('/api/auth', authRoute);
 
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));

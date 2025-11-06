@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const { Member } = require('../models'); // <-- Assure-toi que ton modèle est bien exporté dans /models/index.js
+const { Member } = require('../models');
 const authentification = require('../middleware');
 
 router.post('/', authentification, async (req, res) => {

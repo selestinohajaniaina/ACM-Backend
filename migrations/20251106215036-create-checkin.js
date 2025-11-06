@@ -9,8 +9,8 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      registrationNumber: {
-        type: Sequelize.STRING
+      memberId: {
+        type: Sequelize.INTEGER
       },
       activityId: {
         type: Sequelize.INTEGER
@@ -20,9 +20,6 @@ module.exports = {
       },
       checkOutTime: {
         type: Sequelize.DATE
-      },
-      visitReason: {
-        type: Sequelize.TEXT
       },
       createdAt: {
         allowNull: false,
