@@ -37,8 +37,8 @@ router.post('/login', async (req, res) => {
 
 router.get('/token', async (req, res) => {
     try {
-        
-        const { auth: token } = req.query;
+        const token = req.headers.authorization?.split(' ')[1] || (req.query.auth) || undefined;
+        // const { auth: token } = req.query;
         if (!token) throw new Error("Token not found");
 
         const { id, email } = jwt.verify(token, SECRET);
