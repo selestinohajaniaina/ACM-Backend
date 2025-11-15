@@ -30,10 +30,10 @@ router.get('/', authentification, async (req, res) => {
     statistic.checkins = checkins;
 
     const member = await Member.count();
-    statistic.member = member;
+    statistic.members = member;
 
     const activity = await Activity.count();
-    statistic.activity = activity;
+    statistic.activities = activity;
 
     res.status(201).json({ success: true, message: 'All Statistics', data: statistic });
   } catch (error) {
