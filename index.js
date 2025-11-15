@@ -23,9 +23,9 @@ app.use(cors({ origin: '*' }));
 app.use(bodyParser.json({ limit: '10mb' }));
 app.use(bodyParser.urlencoded({ extended: true, limit: '10mb' }));
 
-app.use('/api/member', memberRoute);
-app.use('/api/activity', activityRoute);
-app.use('/api/checkin', checkinRoute);
+app.use('/api/members', memberRoute);
+app.use('/api/activities', activityRoute);
+app.use('/api/checkins', checkinRoute);
 app.use('/api/dashboard', dashboardRoute);
 app.use('/api/auth', authRoute);
 
